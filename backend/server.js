@@ -16,7 +16,9 @@ app.use(
 );
 
 app.use(express.json());
-
+app.get("/",(req,res)=>{
+  res.send("Server is live!")
+})
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/blogs", require("./routes/blogRoutes"));
